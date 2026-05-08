@@ -1,0 +1,10 @@
+void main() {
+TRISB = 0x00; // PORTB output
+PORTB = 0x00;
+while(1) {
+PORTB.F0 = 1; // Relay ON
+delay_ms(1000);
+PORTB.F0 = 0; // Relay OFF
+delay_ms(1000);
+}
+}
