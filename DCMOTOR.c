@@ -1,0 +1,13 @@
+void main() {
+TRISB = 0x00;
+PORTB= 0x00;
+while(1){
+PORTB.f2=1; //en1 pin active
+PORTB.f0 = 1;
+PORTB.f1 = 0;
+delay_ms(5000);
+PORTB.f0 = 0;
+PORTB.f1 = 1;
+delay_ms(5000);
+}
+}
